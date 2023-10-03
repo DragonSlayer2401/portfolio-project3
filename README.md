@@ -55,8 +55,8 @@ vite >= 4.4.5
 <br>
 
 1. Create a .env file in the api folder
-2. In the .env file create the following 2 variables DATABASE_URL and PORT
-3. Store your database connection string in DATABASE_URL and the port you want to run on in PORT
+2. In the .env file create the following 2 variables DATABASE_URL and CLIENT_SECRET
+3. Store your database connection string in DATABASE_URL and your Spotify client secret in CLIENT_SECRET
 4. Run the server-side and client-side commands listed below
 
 <br>
@@ -80,3 +80,4 @@ npm run dev
 # Links
 <br>
 Link to frontend http://localhost:5173/
+Link to backend http://localhost:8000/auth
