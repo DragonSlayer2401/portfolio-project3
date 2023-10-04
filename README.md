@@ -10,25 +10,15 @@ Database = MongoDB
 <br>
 Browser = latest version of any well known browser
 <br>
-bcrypt-nodejs >= 0.0.3
-<br>
 cors >= 2.8.5
 <br>
 dotenv >= 16.3.1
 <br>
 express >= 4.18.2
 <br>
-jwt-simple >= 0.5.6
-<br>
 mongoose >= 7.5.2
 <br>
 nodemon >= 3.0.1
-<br>
-passport >= 0.6.0
-<br>
-passport-jwt >= 4.0.1
-<br>
-passport-local >= 1.0.0
 <br>
 react >= 18.2.0
 <br>
