@@ -12,6 +12,8 @@ Browser = latest version of any well known browser
 <br>
 cors >= 2.8.5
 <br>
+querystring >= 0.2.1
+<br>
 dotenv >= 16.3.1
 <br>
 express >= 4.18.2
