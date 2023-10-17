@@ -6,10 +6,6 @@ import logo from "/spotify-white-logo.png";
 export default function Navigation({ authenticated }) {
   const [searchValue, setSearchValue] = useState();
 
-  useEffect(() => {
-    axios.get("http://localhost:8000/auth/status")
-  }, [])
-
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(searchValue);
