@@ -24,6 +24,24 @@ mongoose >= 7.5.2
 <br>
 nodemon >= 3.0.1
 <br>
+@emotion/react >= 11.11.1
+<br>
+@emotion/styled >= 11.11.0
+<br>
+@fontsource/roboto >= 5.0.8
+<br>
+@mui/icons-material >= 5.14.13
+<br>
+@mui/material >= 5.14.13
+<br>
+autoprefixer >= 10.4.16
+<br>
+postcss >= 8.4.31
+<br>
+react-router-dom >= 6.17.0
+<br>
+tailwindcss >= 3.3.3
+<br>
 react >= 18.2.0
 <br>
 react-dom >= 18.2.0
