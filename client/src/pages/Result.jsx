@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Result() {
   const [searchValue, setSearchValue] = useState();
-  const [results, setResults] = useState(null || history.state);
+  const [results, setResults] = useState(history.state.artists === undefined ? null : history.state);
 
   const handleSubmit = (event) => {
     event.preventDefault();

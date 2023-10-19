@@ -1,4 +1,3 @@
-import axios from "axios";
 import logo from "/spotify-logo.png";
 
 export default function Message({ heading, body }) {
