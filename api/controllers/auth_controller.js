@@ -67,10 +67,8 @@ const checkToken = (req, res) => {
           const newToken = {
             token: response.data.access_token,
             refreshToken: refresh,
-            tokenExpires: response.data.expires_in * 1000 + Date.now(),
+            tokenExpires: response.data.expires_in * 1000 + Date.now(), 
           };
-
-          console.log(token[0])
 
           Token.updateOne(
             {
@@ -79,14 +77,12 @@ const checkToken = (req, res) => {
             {
               $set: newToken,
             }
-          )
-          .then((data) => {
+          ).then((data) => {
             res
               .status(200)
               .json({ success: true, message: "token updated successfully" });
           });
-        } 
-        else {
+        } else {
           res
             .status(200)
             .json({ success: true, message: "token is still valid" });
@@ -95,4 +91,19 @@ const checkToken = (req, res) => {
     });
 };
 
-module.exports = { generateToken, addToken, checkToken };
+const search = (req, res) => {
+  const searchValue = req.body.searchValue;
+  axios.get("http://localhost:8000/auth/status").then(() => {
+    Token.find()
+      .exec()
+      .then((tokens) => {
+        const token = tokens[0].token;
+        const url = `https://api.spotify.com/v1/search?q=${searchValue}&type=artist,album,track&limit=4`;
+        axios
+          .get(url, { headers: {Authorization: `Bearer ${token}`} })
+          .then((result) => res.status(200).json({data: result.data}));
+      });
+  });
+};
+
+module.exports = { generateToken, addToken, checkToken, search };
